@@ -28,6 +28,10 @@ html {
   overflow-x: hidden;
 }
 
+body{
+  height: 1000px;
+}
+
 /*-----------------------------
  Header section start 
 -------------------------------*/
@@ -37,7 +41,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 9%;
+  padding: 1.5rem 9%;
   background: var(--violet);
   /* border-top: 2px solid green; */
 }
@@ -65,15 +69,17 @@ html {
   color: rgb(14, 9, 9);
 }
 .header-2 .logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: bolder;
   font-size: 3rem;
   color: rgb(146, 243, 146);
 }
 .header-2 .search-bar-container{
   display: flex;
-  justify-items: center;
-  align-items: center;
-  width: 50rem;
+  width: 70%;
+  float: right;
   padding: 1.5rem;
   background: rgb(255, 255, 255, .2);
   border-radius: .5rem;
@@ -104,11 +110,18 @@ html {
   color: #333;
   font-size: 2rem;
   margin-right: 2rem;
+  display: inline-block;
 }
 .header-3 .icons a{
   color: #333;
   font-size: 2.5rem;
   margin-left: 2rem;  
+}
+.header-3.active{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .header-3 .navbar a:hover{
   color: rgb(43, 43, 30);
@@ -185,6 +198,7 @@ html {
   }
   .header-2 .search-bar-container{
     margin-top: 2rem;
+    width: 100%;
   }
 }
 @media (max-width:450px){
@@ -193,8 +207,5 @@ html {
   }
   .header-1{
     display: none;
-  }
-  .header-2 .search-bar-container{
-    width: 38rem;
   }
 }
