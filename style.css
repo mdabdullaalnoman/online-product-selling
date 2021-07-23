@@ -201,11 +201,12 @@ Carousel section start
   object-fit: cover;
 }
 
-/* Sari section start */
+/*--------------------------------
+ Sari section start
+--------------------------------- */
 .sari-warper{
   display: grid;
   grid-template-columns: repeat(auto-fit , minmax(25rem , 1fr));
-  /* justify-items: center; */
   grid-row-gap: 2rem;
   grid-column-gap: 1rem;
   margin: 3rem 5rem;
@@ -254,7 +255,12 @@ Carousel section start
 .card-footer .star-icons i:last-child {
  color: grey;
 }
-/* media queries */
+
+
+
+/*-------------------------------------
+ media queries
+------------------------------------- */
 @media (max-width:1200px){
   html{
     font-size: 55%;
@@ -299,11 +305,6 @@ Carousel section start
   .header-2 .search-bar-container{
     margin-top: 2rem;
     width: 100%;
-  }
-}
-@media (max-width:550px){
-  html{
-    font-size: 50%;
   }
   .header-1{
     display: none;
