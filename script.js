@@ -18,3 +18,11 @@ window.onscroll = () =>{
         header.classList.remove('active');
     }
 }
+
+
+// For swiper
+var swiper = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
