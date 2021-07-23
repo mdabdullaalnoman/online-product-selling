@@ -277,6 +277,9 @@ Carousel section start
   #menu-bar{
     display: initial;
   }
+  .header-3{
+    display: none;
+  }
   .header-3 .navbar{
     position: absolute;
     top: 100%;
