@@ -169,37 +169,7 @@ Carousel section start
   height: 100%;
 }
 
-.swiper-container {
-  width: 100%;
-  height: 100%;
-}
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 /*--------------------------------
  Sari section start
@@ -237,21 +207,39 @@ Carousel section start
 .sari-card{
   position: relative;
   padding: 1rem;
+  box-shadow: none;
+}
+.sari-card:hover{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: .5s;
 }
 .sari-card .sari-img img{
   width: 100%;
 }
-/* .sari-card:hover .sari-img .card-hover-icon{
+.sari-card:hover .sari-img .card-hover-icon{
  display: block;
- transition: 1s;
-} */
+ animation: bounce 2s linear infinite alternate;
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    padding: .3rem .5rem;
+  }
+  40% {
+    transform: translateX(-5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+}
 .sari-card .sari-img .card-hover-icon{
   position: absolute;
   top: 1rem;
   right: 1rem;
-  padding: .3rem .5rem;
-  /* display: none; */
+  display: none;
 }
 .sari-card .sari-img .card-hover-icon a{
   color: var(--white);
@@ -266,6 +254,7 @@ Carousel section start
   color: var(--black);
   border-radius: 0.8em; /* or 50% width & line-height */
   margin: .5rem;
+  border: .1rem solid var(--red);
 }
 .sari-card .sari-img .card-hover-icon a:hover{
   background: var(--violet);
@@ -331,9 +320,6 @@ Carousel section start
   #menu-bar{
     display: initial;
   }
-  .header-3{
-    display: none;
-  }
   .header-3 .navbar{
     position: absolute;
     top: 100%;
@@ -343,7 +329,6 @@ Carousel section start
     background: var(--black);
     border-top: .1rem solid rgb(14, 9, 9);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); */
   }
   .header-3 .navbar.active{
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
@@ -367,10 +352,18 @@ Carousel section start
     display: none;
   }
   .sari-warper{
-    grid-template-columns: repeat(auto-fit , minmax(15rem , 1fr));
-    margin: 3rem 1rem;
+    padding: 1rem .5rem;
   }
   .card-footer{
    flex-direction: column;
+  }
+}
+@media(max-width:498px){
+  html{
+    font-size: 50%;
+  }
+  .sari-warper{
+    grid-template-columns: repeat(auto-fit , minmax(17rem , 1fr));
+    padding: 1rem .3rem;
   }
 }
