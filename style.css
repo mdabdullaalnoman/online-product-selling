@@ -8,7 +8,7 @@
   text-transform: capitalize;
   outline: none;
   border: none;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: all .2s linear;
 }
 :root {
@@ -185,15 +185,16 @@ Carousel section start
  Sari section start
 --------------------------------- */
 .sari-colection{
-  width: 23rem;
   color: var(--black);
   font-size: 2.5rem;
-  margin: 2rem auto 0 auto;
-  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin-left:5%;
+  margin-top: 2rem;
 }
 .sari-colection::after{
  content: "";
- position: absolute;
+ display: block;
  background-image: linear-gradient(to right, var(--violet) , var(--black));
  height: .5rem;
  border-radius: 1rem;
