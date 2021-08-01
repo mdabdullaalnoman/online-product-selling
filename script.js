@@ -29,7 +29,7 @@ var imgTag = document.querySelector("img");
 
 var count = 0;
 
-// var myVar = setInterval(next, 5000);
+var myVar = setInterval(next, 5000);
 
 function next(){
     count++
