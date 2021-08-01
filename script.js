@@ -18,3 +18,40 @@ window.onscroll = () => {
         header.classList.remove('active');
     }
 }
+
+
+
+// ----------------------------carousel---------------------------
+
+var photos = ["media/carousel-1l.jpg" , "media/carousel-2.jpg", "media/carousel-3.jpg" ];
+
+var imgTag = document.querySelector("img");
+
+var count = 0;
+
+// var myVar = setInterval(next, 5000);
+
+function next(){
+    count++
+    if(count >= photos.length){
+        count=0;
+        imgTag.src = photos[count];
+    }
+    else{
+        imgTag.src =photos[count]; 
+    }
+    
+}
+
+function prev(){
+    count--
+
+    if(count < 0){
+        count = photos.length - 1;
+        imgTag.src = photos[count];
+        
+    }
+    else{
+        imgTag.src =photos[count]; 
+    }
+}

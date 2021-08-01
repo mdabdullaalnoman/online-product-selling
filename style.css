@@ -98,6 +98,7 @@ span {
 .header-2 .logo i {
   margin-right: 1rem;
   color: var(--red);
+  animation: bounce 2s linear infinite alternate;
 }
 
 .header-2 .logo:hover i {
@@ -192,23 +193,69 @@ span {
   display: none;
 }
 
+
+
+
+
+
+
+
+
 /* ----------------------------
 Carousel section start
 ------------------------------ */
-.carousel {
-  padding: 2rem 9%;
-}
 
-.carousel-warper {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 5rem;
+.carousel-warper{
+  position: relative;
 }
-
-.carousel-warper img {
+.carousel-warper img{
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  z-index: -1;
 }
+
+.carousel-warper .fa-arrow-circle-o-left{
+  margin: 0;
+  font-size: 3rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.carousel-warper .fa-arrow-circle-o-right{
+  margin: 0;
+  font-size: 3rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.carousel-warper .fa-arrow-circle-o-left:hover ,.carousel-warper .fa-arrow-circle-o-right:hover{
+  background-color: var(--violet);
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -230,14 +277,14 @@ Carousel section start
   background-image: linear-gradient(to right, var(--violet), var(--black));
   height: .5rem;
   border-radius: 1rem;
-  width: 0;
+  width: 100%;
   left: 0;
   bottom: -.5rem;
 
 }
 
 .sari-colection:hover::after {
-  width: 100%;
+  width: 0%;
   transition: .3s;
 }
 
